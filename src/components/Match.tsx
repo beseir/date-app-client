@@ -44,7 +44,7 @@ export const Match = () => {
             profileImageURL: getRandomImage(),
             description: "string",
             username: "Paul",
-            bgColor: getRandomColor(),
+            bgColor: "#2d2929",
         }
 
     }

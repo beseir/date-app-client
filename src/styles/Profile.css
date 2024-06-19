@@ -1,17 +1,31 @@
-.profile-card{
+.profile{
     padding: 10px;
     width: 100%;
     min-height: 100vh;
     background-color: deepskyblue;
 }
 .profile-image{
-    width: 100%;
-    height: 500px;
+    width: 98px;
+    height: 98px;
+    border-radius: 100%;
     object-fit: cover;
 }
 .username-text{
     text-align: center;
+    align-content: center;
+    padding: 10px;
 }
 .description-text{
     text-align: center;
+}
+.profile-header{
+    display: flex;
+}
+.profile-card{
+    background-color: aliceblue;
+    width: 90vw;
+    min-height: 80vh;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 10px;
 }

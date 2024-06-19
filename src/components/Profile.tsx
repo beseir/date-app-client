@@ -12,10 +12,14 @@ interface UserProfile {
 }
 export const Profile: React.FC<UserProfile> =  ({data:{username, bgColor, profileImageURL, description}}) => {
     return (
-        <div className={"profile-card"} style={{backgroundColor:bgColor}} >
-            <img src={profileImageURL} alt={"profile picture"} className={"profile-image"}/>
-            <h2 className={"username-text"}>{username}</h2>
-            <p className={"description-text"} >{description}</p>
+        <div className={"profile"} style={{backgroundColor:bgColor}} >
+            <div className={"profile-header"}>
+                <img src={profileImageURL} alt={"profile picture"} className={"profile-image"}/>
+                <h2 className={"username-text"}>{username}</h2>
+            </div>
+
+
+            <div className={"profile-card"} >{description}</div>
         </div>
     );
 };
