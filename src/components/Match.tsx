@@ -17,11 +17,11 @@ export const Match = () => {
 
     const settings = {
         easing:"ease",
-
+        //vertical:true,
         //fade:"true",
         arrows: false,
         infinite: false,
-        speed: 400,
+        speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
