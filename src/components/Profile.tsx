@@ -1,7 +1,7 @@
 import "../styles/Profile.css"
 import React from "react";
 
-interface Props {
+interface UserProfile {
     data:{
         profileImageURL: string,
         description: string,
@@ -10,7 +10,7 @@ interface Props {
     }
 
 }
-export const Profile: React.FC<Props> = ({data:{username, bgColor, profileImageURL, description}}) => {
+export const Profile: React.FC<UserProfile> =  ({data:{username, bgColor, profileImageURL, description}}) => {
     return (
         <div className={"profile-card"} style={{backgroundColor:bgColor}} >
             <img src={profileImageURL} alt={"profile picture"} className={"profile-image"}/>
