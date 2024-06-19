@@ -4,3 +4,12 @@
     min-height: 100vh;
     background-color: deepskyblue;
 }
+.profile-image{
+    width: 100%;
+}
+.username-text{
+    text-align: center;
+}
+.description-text{
+    text-align: center;
+}
