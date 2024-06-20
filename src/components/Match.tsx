@@ -7,11 +7,8 @@ import React from "react";
 
 export const Match = () => {
 
-
-    const settings = {
+    const sliderSettings = {
         easing:"ease",
-        verticalSwiping: true,
-        //fade:"true",
         arrows: false,
         infinite: false,
         speed: 300,
@@ -36,14 +33,15 @@ export const Match = () => {
         return{
             profileImageURL: getRandomImage(),
             description: "string",
-            username: "Paul, 18",
-            bgColor: "#1c1b22",
+            username: "Paul",
+            age: 18,
+            location: {country:"Belarus", city:"Minsk"},
         }
 
     }
-    //  {Array.from(leng, (_, index:number) =>  <Profile key = {index} bgColor={"#3d0a42"}/>)}
+
     return (
-        <Slider {...settings} className={"match-slider"}>
+        <Slider {...sliderSettings} className={"match-slider"}>
             {Array.from({ length: 40 }).map((_, index) => (
                 <React.Fragment key={index}>{<Profile data={props()}/>}</React.Fragment>
             ))}
