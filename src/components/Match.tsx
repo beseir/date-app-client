@@ -6,25 +6,18 @@ import {Profile} from "./Profile.tsx";
 import React from "react";
 
 export const Match = () => {
-    function getRandomColor(): string {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
+
 
     const settings = {
         easing:"ease",
-        //vertical:true,
+        verticalSwiping: true,
         //fade:"true",
         arrows: false,
         infinite: false,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-    };
+    }
     const images:string[] = [
         './pasha/photo_2023-09-28_22-02-49.jpg',
         './pasha/photo_2024-01-06_19-46-53.jpg',
@@ -43,8 +36,8 @@ export const Match = () => {
         return{
             profileImageURL: getRandomImage(),
             description: "string",
-            username: "Paul",
-            bgColor: "#2d2929",
+            username: "Paul, 18",
+            bgColor: "#1c1b22",
         }
 
     }

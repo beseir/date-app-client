@@ -11,15 +11,19 @@
     object-fit: cover;
 }
 .username-text{
-    text-align: center;
+
+}
+.user-info{
     align-content: center;
-    padding: 10px;
+    padding: 15px;
+    text-align: left;
 }
 .description-text{
     text-align: center;
 }
 .profile-header{
     display: flex;
+    color:white;
 }
 .profile-card{
     background-color: aliceblue;
