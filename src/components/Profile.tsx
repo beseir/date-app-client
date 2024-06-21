@@ -1,20 +1,7 @@
 import "../styles/Profile.css"
 import React from "react";
 
-type userLocation = {
-    country: string,
-    city: string
-}
-interface UserProfile {
-    data:{
-        profileImageURL: string,
-        description: string,
-        username: string,
-        age: number,
-        location: userLocation;
-    }
 
-}
 export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, profileImageURL, description}}) => {
     return (
         <div className={"profile"} >

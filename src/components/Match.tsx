@@ -4,6 +4,7 @@ import "../styles/MatchPage.css"
 import Slider from "react-slick";
 import {Profile} from "./Profile.tsx";
 import React from "react";
+import {BottomBar} from "./BottomBar.tsx";
 
 export const Match = () => {
 
@@ -41,10 +42,14 @@ export const Match = () => {
     }
 
     return (
-        <Slider {...sliderSettings} className={"match-slider"}>
-            {Array.from({ length: 40 }).map((_, index) => (
-                <React.Fragment key={index}>{<Profile data={props()}/>}</React.Fragment>
-            ))}
-        </Slider>
+        <>
+            <Slider {...sliderSettings} className={"match-slider"}>
+                {Array.from({ length: 40 }).map((_, index) => (
+                    <React.Fragment key={index}>{<Profile data={props()}/>}</React.Fragment>
+                ))}
+            </Slider>
+            <BottomBar/>
+        </>
+
     );
 };

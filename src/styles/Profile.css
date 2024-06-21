@@ -5,14 +5,12 @@
     background-color: #1c1b22;
 }
 .profile-image{
-    width: 88px;
-    height: 88px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     object-fit: cover;
 }
-.username-text{
 
-}
 .user-info{
     align-content: center;
     padding: 15px;
@@ -29,7 +27,7 @@
 .profile-card{
     background-color: aliceblue;
     width: 90vw;
-    min-height: 80vh;
+    min-height: 70vh;
     margin: 15px;
     border-radius: 15px;
     padding: 10px;
