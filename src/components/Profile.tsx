@@ -23,12 +23,17 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
                 </div>
 
             </div>
+
             <Swiper
                 effect={'cards'}
                 grabCursor={true}
               //  loop={true}
                 modules={[EffectCards]}
                 className="mySwiper"
+                speed={550}
+                shortSwipes={false}
+                cardsEffect={{perSlideOffset:8}}
+
             >
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>

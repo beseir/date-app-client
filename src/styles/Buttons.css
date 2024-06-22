@@ -4,13 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
-.dislike:active, .dislike:hover{
+.dislike:active{
     background-color: #dbe1e7;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
-.like:active, .like:hover{
+.like:active{
     background-color: #dbe1e7;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
@@ -39,5 +40,6 @@
     grid-template-rows: 1fr auto;
 }
 .like{
+
     border-left: #848386 2px solid;
 }
