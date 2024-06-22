@@ -1,6 +1,6 @@
 import "../styles/Profile.css"
 import React from "react";
-import { EffectCards } from 'swiper/modules';
+import {EffectCards, Virtual} from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-cards';
@@ -28,12 +28,12 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
             <Swiper
                 effect={'cards'}
                 grabCursor={true}
-              //  loop={true}
-                modules={[EffectCards]}
+                modules={[EffectCards, Virtual]}
                 className="mySwiper"
                 speed={550}
-                shortSwipes={false}
-                longSwipesMs={250}
+                virtual={{enabled:true}}
+                virtualTranslate={true}
+
             >
 
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>

@@ -3,10 +3,11 @@ import "../styles/MatchPage.css"
 
 import {Profile} from "./Profile.tsx";
 import {BottomBar} from "./BottomBar.tsx";
+import {useState} from "react";
 
 export const Match = () => {
 
-
+    const [id, setId] = useState(0);
     const images:string[] = [
         './pasha/photo_2023-09-28_22-02-49.jpg',
         './pasha/photo_2024-01-06_19-46-53.jpg',
@@ -21,7 +22,7 @@ export const Match = () => {
         const randomIndex = Math.floor(Math.random() * images.length);
         return images[randomIndex];
     };
-    const props = () => {
+    const props = (id: number) => {
         return{
             profileImageURL: getRandomImage(),
             description: "Привет! Меня зовут Павел, я фурри и горжусь этим! Учусь в БГТУ, где изучаю React, и живу в трехэтажном коттедже. В свободное время люблю заниматься косплеем, рисовать и участвовать в фурри-конвенциях. Обожаю животных и мечтаю завести еще несколько питомцев.\n" +
@@ -32,18 +33,22 @@ export const Match = () => {
                 "    Рисование\n" +
                 "    Путешествия в чемодане\n" +
                 "    Технологии и гаджеты\n" +
-                "    Видеоигры и аниме\n",
+                "    Видеоигры и аниме\n" + id.toString(),
             username: "Paul",
             age: 18,
             location: {country:"Belarus", city:"Minsk"},
+            id: id
         }
 
+    }
+    const onClickHandler = () =>{
+    setId(id + 1);
     }
 
     return (
         <>
-            <Profile data={props()}/>
-            <BottomBar/>
+            <Profile data={props(id)}/>
+            <BottomBar onClick={onClickHandler}/>
         </>
 
     );
