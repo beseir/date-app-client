@@ -2,7 +2,7 @@ type userLocation = {
     country: string,
     city: string
 }
-interface UserProfile {
+export interface UserProfile {
     data:{
         profileImageURL: string,
         description: string,
