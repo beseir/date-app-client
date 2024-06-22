@@ -29,7 +29,6 @@ const swiperOptions: SwiperOptions ={
                     </div>
                     <img src={profileImageURL} alt={"profile picture"} className={"profile-image"}/>
                 </div>
-
                 <div className={"user-info"}>
                     <h2 className={"username-text"}>{username}, {age}</h2>
                     <p>{location.country}, {location.city}</p>
