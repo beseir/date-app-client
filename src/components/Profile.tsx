@@ -1,6 +1,6 @@
 import "../styles/Profile.css"
 import React from "react";
-import {EffectCards, Virtual} from 'swiper/modules';
+import {EffectCards} from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-cards';
@@ -12,10 +12,9 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
 const swiperOptions: SwiperOptions ={
     effect:'cards',
     grabCursor:true,
-    modules:[EffectCards, Virtual],
+    modules:[EffectCards],
     speed:550,
-    virtual:{enabled:true},
-    virtualTranslate:true,
+
     shortSwipes:false,
     longSwipes: true,
     longSwipesMs: 100
