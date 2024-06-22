@@ -4,7 +4,7 @@ import { EffectCards } from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import {FpsView} from "react-fps";
+
 
 export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, profileImageURL, description}}) => {
 
@@ -24,7 +24,7 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
                 </div>
 
             </div>
-             <FpsView></FpsView>
+
             <Swiper
                 effect={'cards'}
                 grabCursor={true}
@@ -33,9 +33,9 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
                 className="mySwiper"
                 speed={550}
                 shortSwipes={false}
-                cardsEffect={{perSlideOffset:8}}
-
+                longSwipesMs={250}
             >
+
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
