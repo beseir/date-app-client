@@ -1,8 +1,12 @@
 import "../styles/Profile.css"
 import React from "react";
-
+import { EffectCards } from 'swiper/modules';
+import {Swiper, SwiperSlide} from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, profileImageURL, description}}) => {
+
     return (
         <div className={"profile"} >
             <div className={"profile-header"}>
@@ -19,9 +23,19 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
                 </div>
 
             </div>
+            <Swiper
+                effect={'cards'}
+                grabCursor={true}
+              //  loop={true}
+                modules={[EffectCards]}
+                className="mySwiper"
+            >
+                <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
+                <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
+                <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
 
+            </Swiper>
 
-            <div className={"profile-card"}>{description}</div>
         </div>
     );
 };

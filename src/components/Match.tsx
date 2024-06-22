@@ -1,21 +1,12 @@
 import "slick-carousel/slick/slick.css";
 import "../styles/MatchPage.css"
 
-import Slider from "react-slick";
 import {Profile} from "./Profile.tsx";
-import React from "react";
 import {BottomBar} from "./BottomBar.tsx";
 
 export const Match = () => {
 
-    const sliderSettings = {
-        easing:"ease",
-        arrows: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    }
+
     const images:string[] = [
         './pasha/photo_2023-09-28_22-02-49.jpg',
         './pasha/photo_2024-01-06_19-46-53.jpg',
@@ -33,7 +24,15 @@ export const Match = () => {
     const props = () => {
         return{
             profileImageURL: getRandomImage(),
-            description: "string",
+            description: "Привет! Меня зовут Павел, я фурри и горжусь этим! Учусь в БГТУ, где изучаю React, и живу в трехэтажном коттедже. В свободное время люблю заниматься косплеем, рисовать и участвовать в фурри-конвенциях. Обожаю животных и мечтаю завести еще несколько питомцев.\n" +
+                "\n" +
+                "Интересы:\n" +
+                "\n" +
+                "    Фурри-культура\n" +
+                "    Рисование\n" +
+                "    Путешествия в чемодане\n" +
+                "    Технологии и гаджеты\n" +
+                "    Видеоигры и аниме\n",
             username: "Paul",
             age: 18,
             location: {country:"Belarus", city:"Minsk"},
@@ -43,11 +42,7 @@ export const Match = () => {
 
     return (
         <>
-            <Slider {...sliderSettings} className={"match-slider"}>
-                {Array.from({ length: 40 }).map((_, index) => (
-                    <React.Fragment key={index}>{<Profile data={props()}/>}</React.Fragment>
-                ))}
-            </Slider>
+            <Profile data={props()}/>
             <BottomBar/>
         </>
 

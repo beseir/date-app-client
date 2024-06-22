@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: center;
 }
-.dislike:active{
+.dislike:active, .dislike:hover{
     background-color: #dbe1e7;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
-.like:active{
+.like:active, .like:hover{
     background-color: #dbe1e7;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
