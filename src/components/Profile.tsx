@@ -4,6 +4,7 @@ import { EffectCards } from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-cards';
+import {FpsView} from "react-fps";
 
 export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, profileImageURL, description}}) => {
 
@@ -23,7 +24,7 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
                 </div>
 
             </div>
-
+             <FpsView></FpsView>
             <Swiper
                 effect={'cards'}
                 grabCursor={true}
