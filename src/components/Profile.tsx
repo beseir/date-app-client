@@ -33,6 +33,7 @@ export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, 
                 speed={550}
                 virtual={{enabled:true}}
                 virtualTranslate={true}
+                 shortSwipes={false}
 
             >
 
