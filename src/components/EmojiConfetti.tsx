@@ -107,7 +107,7 @@ export const EmojiConfetti: React.FC<prop> = ({  emojiType }) => {
     };
 
 
-        const rect = button.getBoundingClientRect();
+        const rect = button!.getBoundingClientRect();
 
         const emitterPosition = {
             x: ((rect.left + rect.right) / 2 / window.innerWidth) * 100,
