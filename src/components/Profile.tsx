@@ -33,7 +33,6 @@ const swiperOptions: SwiperOptions ={
                     <h2 className={"username-text"}>{username}, {age}</h2>
                     <p>{location.country}, {location.city}</p>
                 </div>
-
             </div>
 
             <Swiper  className={"mySwiper"}{...swiperOptions}

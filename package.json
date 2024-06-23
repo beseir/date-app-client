@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@react-buddy/ide-toolbox": "^2.4.0",
+    "@tsparticles/all": "^3.4.0",
+    "@tsparticles/engine": "^3.4.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fps": "^1.0.6",
@@ -19,6 +23,7 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
+    "@types/node": "^20.14.8",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-slick": "^0.23.13",

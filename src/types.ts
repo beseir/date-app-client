@@ -12,3 +12,8 @@ export interface UserProfile {
     }
 
 }
+export enum particleType{
+    SKULL,
+    HEART,
+    NONE
+}

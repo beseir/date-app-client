@@ -4,10 +4,14 @@ import "../styles/MatchPage.css"
 import {Profile} from "./Profile.tsx";
 import {BottomBar} from "./BottomBar.tsx";
 import {useState} from "react";
+import {EmojiConfetti} from "./EmojiConfetti.tsx";
+import {particleType} from "../types.ts";
 
 export const Match = () => {
+    const [showConfetti, setShowConfetti] = useState(false);
 
-    const [id, setId] = useState(0);
+    const [emojiType, setEmojiType] = useState(particleType.NONE)
+
     const images:string[] = [
         './pasha/photo_2023-09-28_22-02-49.jpg',
         './pasha/photo_2024-01-06_19-46-53.jpg',
@@ -41,15 +45,25 @@ export const Match = () => {
         }
 
     }
-    const onClickHandler = () =>{
-    setId(id + 1);
-    console.log(location.hostname);
+    const onLikeHandler = () =>{
+        if(showConfetti) return;
+        setEmojiType(particleType.HEART);
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 1000)
+    }
+    const onDislikeHandler = () =>{
+        if(showConfetti) return;
+        setEmojiType(particleType.SKULL);
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 1000)
     }
 
     return (
         <>
-            <Profile data={props(id)}/>
-            <BottomBar onClick={onClickHandler}/>
+            <div></div>
+            <Profile data={props(1)}/>
+            <BottomBar onLike={onLikeHandler} onDislike={onDislikeHandler}/>
+            {showConfetti && <EmojiConfetti emojiType={emojiType}/>}
         </>
 
     );
