@@ -43,6 +43,7 @@ export const Match = () => {
     }
     const onClickHandler = () =>{
     setId(id + 1);
+    console.log(location.hostname);
     }
 
     return (

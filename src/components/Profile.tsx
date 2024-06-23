@@ -13,11 +13,12 @@ const swiperOptions: SwiperOptions ={
     effect:'cards',
     grabCursor:true,
     modules:[EffectCards],
-    speed:550,
-
+    speed:500,
+    initialSlide: 1,
     shortSwipes:false,
-    longSwipes: true,
-    longSwipesMs: 100
+    loopPreventsSliding: true,
+    touchRatio: 1.5,
+
 }
 
     return (
@@ -36,7 +37,14 @@ const swiperOptions: SwiperOptions ={
 
             </div>
 
-            <Swiper  className={"mySwiper"}{...swiperOptions}>
+            <Swiper  className={"mySwiper"}{...swiperOptions}
+                     onRealIndexChange={(swiper) => {
+                         swiper.allowTouchMove = false;
+                         swiper.unsetGrabCursor();
+                     }}
+                     onTouchEnd={(swiper) => {
+                         swiper.allowTouchMove = true;
+                     }}>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
