@@ -17,8 +17,7 @@ const swiperOptions: SwiperOptions ={
     initialSlide: 1,
     shortSwipes:false,
     loopPreventsSliding: true,
-    touchRatio: 1.5,
-
+    touchRatio: 1.6,
 }
 
     return (
@@ -38,13 +37,7 @@ const swiperOptions: SwiperOptions ={
             </div>
 
             <Swiper  className={"mySwiper"}{...swiperOptions}
-                     onRealIndexChange={(swiper) => {
-                         swiper.allowTouchMove = false;
-                         swiper.unsetGrabCursor();
-                     }}
-                     onTouchEnd={(swiper) => {
-                         swiper.allowTouchMove = true;
-                     }}>
+                style={{transitionTimingFunction: 'ease-in-out'}}>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
