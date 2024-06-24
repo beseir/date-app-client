@@ -4,7 +4,7 @@ import "../styles/MatchPage.css"
 import {Profile} from "./Profile.tsx";
 import {BottomBar} from "./BottomBar.tsx";
 import {useState} from "react";
-import {EmojiConfetti} from "./EmojiConfetti.tsx";
+import {EmojiConfetti} from "./Particles/EmojiConfetti.tsx";
 import {particleType} from "../types.ts";
 
 export const Match = () => {
@@ -22,13 +22,13 @@ export const Match = () => {
         './pasha/photo_2024-03-13_12-34-59 (4).jpg',
         './pasha/photo_2024-03-13_12-34-59 (6).jpg'
     ];
-    const getRandomImage = (): string => {
-        const randomIndex = Math.floor(Math.random() * images.length);
-        return images[randomIndex];
-    };
+    // const getRandomImage = (): string => {
+    //     const randomIndex = Math.floor(Math.random() * images.length);
+    //     return images[randomIndex];
+    // };
     const props = (id: number) => {
         return{
-            profileImageURL: getRandomImage(),
+            profileImageURL: images[1],
             description: "Привет! Меня зовут Павел, я фурри и горжусь этим! Учусь в БГТУ, где изучаю React, и живу в трехэтажном коттедже. В свободное время люблю заниматься косплеем, рисовать и участвовать в фурри-конвенциях. Обожаю животных и мечтаю завести еще несколько питомцев.\n" +
                 "\n" +
                 "Интересы:\n" +
@@ -49,18 +49,18 @@ export const Match = () => {
         if(showConfetti) return;
         setEmojiType(particleType.HEART);
         setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 1000)
+        setTimeout(() => setShowConfetti(false), 1100)
     }
     const onDislikeHandler = () =>{
         if(showConfetti) return;
         setEmojiType(particleType.SKULL);
         setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 1000)
+        setTimeout(() => setShowConfetti(false), 1100)
     }
 
     return (
         <>
-            <div></div>
+
             <Profile data={props(1)}/>
             <BottomBar onLike={onLikeHandler} onDislike={onDislikeHandler}/>
             {showConfetti && <EmojiConfetti emojiType={emojiType}/>}
