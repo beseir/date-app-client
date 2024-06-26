@@ -3,37 +3,28 @@ import type {ISourceOptions} from "@tsparticles/engine";
 export const baseOpt: ISourceOptions = {
 
     smooth: true,
-    duration: 1.1,
+    duration: 2,
     particles: {
         opacity: {
             value: 1,
-
         },
         size: {
             value: {
-                min: 12,
+                min: 8,
                 max: 14,
             },
-            animation: {
-                enable: true,
-                speed: 5,
-                startValue: "max",
-                destroy: "min"
-            }
         },
         move: {
             enable: true,
             gravity: {
                 enable: true,
-                acceleration: 10
+                acceleration: 15
             },
-            speed: 25,
+            speed: 10,
             direction: "none",
             random: true,
             straight: false,
-            outModes: {
-                default: 'destroy',
-            },
+
         },
         rotate: {
             value: {
@@ -74,7 +65,7 @@ export const emitter = {
     particles: {
         move: {
             direction: 'none',
-            duration: 1,
+            duration: 2,
             random: true,
             straight: false,
             outModes: {

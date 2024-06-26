@@ -1,11 +1,11 @@
 import "slick-carousel/slick/slick.css";
-import "../styles/MatchPage.css"
+import "../../styles/MatchPage.css"
 
 import {Profile} from "./Profile.tsx";
 import {BottomBar} from "./BottomBar.tsx";
-import {useState} from "react";
-import {EmojiConfetti} from "./Particles/EmojiConfetti.tsx";
-import {particleType} from "../types.ts";
+import {useCallback, useEffect, useState} from "react";
+import {EmojiConfetti} from "../Particles/EmojiConfetti.tsx";
+import {particleType} from "../../types.ts";
 
 export const Match = () => {
     const [showConfetti, setShowConfetti] = useState(false);
@@ -45,26 +45,30 @@ export const Match = () => {
         }
 
     }
-    const onLikeHandler = () =>{
+    const onLikeHandler  = useCallback( () =>{
         if(showConfetti) return;
         setEmojiType(particleType.HEART);
         setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 1100)
-    }
-    const onDislikeHandler = () =>{
+    },[showConfetti])
+
+    const onDislikeHandler = useCallback( ()=>{
         if(showConfetti) return;
         setEmojiType(particleType.SKULL);
         setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 1100)
-    }
+    },[showConfetti])
 
+    useEffect(() => {
+        if (showConfetti) {
+            const timeoutId = setTimeout(() => setShowConfetti(false), 400);
+            return () => clearTimeout(timeoutId);
+        }
+    }, [showConfetti]);
     return (
-        <>
-
+        <div>
             <Profile data={props(1)}/>
             <BottomBar onLike={onLikeHandler} onDislike={onDislikeHandler}/>
             {showConfetti && <EmojiConfetti emojiType={emojiType}/>}
-        </>
+        </div>
 
     );
 };

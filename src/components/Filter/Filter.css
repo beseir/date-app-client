@@ -1,0 +1,34 @@
+h2{
+    padding: 5px;
+}
+.filter-option{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+}
+span{
+    font-size: 18px;
+}
+
+.filter{
+    color: aliceblue;
+}
+.MuiSlider-valueLabel{
+    background-color: rgba(150, 150, 150, 0);
+    font-size: 10px;
+    padding: 2px;
+}
+
+.css-14gyywz-MuiSlider-valueLabel.MuiSlider-valueLabelOpen{
+    transform: translateY(100%) scale(1);
+}
+.css-1a4svkv-MuiSlider-root{
+    height: 9px;
+}
+.MuiSelect-select{
+    border: 2px solid white;
+    color: white;
+}
