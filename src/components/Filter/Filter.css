@@ -1,5 +1,6 @@
 h2{
     padding: 5px;
+    margin-top: 5px;
 }
 .filter-option{
     display: flex;
@@ -7,6 +8,7 @@ h2{
     gap: 15px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 14px;
 
 }
 span{
@@ -22,8 +24,8 @@ span{
     padding: 2px;
 }
 
-.css-14gyywz-MuiSlider-valueLabel.MuiSlider-valueLabelOpen{
-    transform: translateY(100%) scale(1);
+ .MuiSlider-valueLabelCircle{
+    transform: translateY(240%) scale(1);
 }
 .css-1a4svkv-MuiSlider-root{
     height: 9px;
