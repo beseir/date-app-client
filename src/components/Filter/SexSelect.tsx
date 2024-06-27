@@ -1,4 +1,4 @@
-import {FormControl, MenuItem, Select, SelectChangeEvent} from "@mui/material";
+import { MenuItem, Select, SelectChangeEvent} from "@mui/material";
 import {useState} from "react";
 
 export const SexSelect = () => {
@@ -8,7 +8,7 @@ export const SexSelect = () => {
         setAge(event.target.value as string);
     };
     return (
-            <FormControl fullWidth>
+
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -21,6 +21,6 @@ export const SexSelect = () => {
                     <MenuItem value={"doesntMatter"}>Неважно</MenuItem>
                     <MenuItem value={"other"}>Другой</MenuItem>
                 </Select>
-            </FormControl>
+
     );
 };

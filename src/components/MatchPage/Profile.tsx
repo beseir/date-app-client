@@ -1,37 +1,36 @@
 import "../../styles/Profile.css"
 import React from "react";
-import {EffectCards} from 'swiper/modules';
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import {SwiperOptions} from "swiper/types";
 import {UserProfile} from "../../types.ts";
+import {Pagination} from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
-export const Profile: React.FC<UserProfile> =  ({data:{username, location, age, profileImageURL, description}}) => {
+
+export const Profile: React.FC<UserProfile> =  ({data:{username, age, profileImageURL, description}}) => {
 const swiperOptions: SwiperOptions ={
-    effect:'cards',
     grabCursor:true,
-    modules:[EffectCards],
+    modules:[Pagination],
     speed:500,
     initialSlide: 1,
     shortSwipes:false,
     loopPreventsSliding: true,
     touchRatio: 1.6,
+   pagination:true
 }
 
     return (
         <div className={"profile"} >
             <div className={"profile-header"}>
-                <div style={{position:"relative"}}>
-                    <div className={"sex"}>
-                        <img src={"./assets/malese.png"} alt={"male"}/>
-                    </div>
+                <div className={"avatarIcon"} style={{position:"relative"}}>
                     <img src={profileImageURL} alt={"profile picture"} className={"profile-image"}/>
                 </div>
                 <div className={"user-info"}>
                     <h2 className={"username-text"}>{username}, {age}</h2>
-                    <p>{location.country}, {location.city}</p>
                 </div>
             </div>
 

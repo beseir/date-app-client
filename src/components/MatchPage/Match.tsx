@@ -59,7 +59,7 @@ export const Match = () => {
 
     useEffect(() => {
         if (showConfetti) {
-            const timeoutId = setTimeout(() => setShowConfetti(false), 400);
+            const timeoutId = setTimeout(() => setShowConfetti(false), 800);
             return () => clearTimeout(timeoutId);
         }
     }, [showConfetti]);

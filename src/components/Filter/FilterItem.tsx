@@ -1,4 +1,4 @@
-import {Box, StyledEngineProvider} from "@mui/material";
+import {Box, FormControl, StyledEngineProvider} from "@mui/material";
 import React from "react";
 
 type FilterProp = {
@@ -10,12 +10,14 @@ export const FilterItem: React.FC<FilterProp> = ({label, Child}) => {
 
     return (
         <>
-            <h2>{label}</h2>
+            <h2 className={"filter-label"}>{label}</h2>
             <div className={"filter-option"}>
 
                 <Box sx={{width: "90vw"}} className={"box"}>
                     <StyledEngineProvider injectFirst>
-                     <Child/>
+                        <FormControl fullWidth>
+                          <Child/>
+                        </FormControl>
                     </StyledEngineProvider>
                 </Box>
             </div>

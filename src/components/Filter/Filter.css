@@ -1,6 +1,6 @@
-h2{
+.filter-label{
     padding: 5px;
-    margin-top: 5px;
+    margin: 5px;
 }
 .filter-option{
     display: flex;
@@ -17,6 +17,10 @@ span{
 
 .filter{
     color: aliceblue;
+    overflow: scroll;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 140px;
 }
 .MuiSlider-valueLabel{
     background-color: rgba(150, 150, 150, 0);
@@ -33,4 +37,23 @@ span{
 .MuiSelect-select{
     border: 2px solid white;
     color: white;
+}
+#demo-multiple-chip{
+    width: 100%;
+}
+.MuiChip-root{
+    color: #cbc9ce;
+}
+.filter-header{
+    padding: 10px;
+    text-align: center;
+}
+.accept-button{
+    align-self: center;
+    width: 90vw;
+    margin: auto;
+}
+.MuiPaper-root{
+    top:0;
+
 }
