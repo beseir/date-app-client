@@ -24,6 +24,7 @@
     display: flex;
     color:white;
     background-color: #23232c;
+    height: 10vh;
 }
 .avatarIcon{
     justify-content: center;
@@ -35,7 +36,7 @@
 .profile-card{
     background-color: #272630;
     width: 100vw;
-    min-height: 80vh;
+    height: 70vh;
     font-size: 18px;
     z-index: 1;
     padding: 15px;

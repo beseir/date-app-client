@@ -18,7 +18,7 @@ const swiperOptions: SwiperOptions ={
     modules:[Pagination],
     speed:500,
     initialSlide: 1,
-    shortSwipes:false,
+    shortSwipes:true,
     loopPreventsSliding: true,
     touchRatio: 1.6,
    pagination:true
