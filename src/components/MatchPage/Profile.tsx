@@ -8,6 +8,7 @@ import {UserProfile} from "../../types.ts";
 import {Pagination} from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/pagination';
+import {Divider} from "@mui/material";
 
 
 
@@ -33,6 +34,7 @@ const swiperOptions: SwiperOptions ={
                     <h2 className={"username-text"}>{username}, {age}</h2>
                 </div>
             </div>
+            <Divider/>
 
             <Swiper  className={"mySwiper"}{...swiperOptions}
                 style={{transitionTimingFunction: 'ease-in-out'}}>
