@@ -39,7 +39,7 @@ const swiperOptions: SwiperOptions ={
             <Swiper  className={"mySwiper"}{...swiperOptions}
                 style={{transitionTimingFunction: 'ease-in-out'}}>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
-                <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
+                <SwiperSlide><div className={"profile-card"}>Вот моя фоточка: <img alt={"card"} className={"image-card"} src={"./pasha/photo_2024-03-13_12-34-57.jpg"}/></div></SwiperSlide>
                 <SwiperSlide><div className={"profile-card"}>{description}</div></SwiperSlide>
             </Swiper>
 

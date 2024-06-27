@@ -23,7 +23,7 @@
 .profile-header{
     display: flex;
     color:white;
-    background-color: #272630;
+    background-color: #23232c;
 }
 .avatarIcon{
     justify-content: center;
@@ -41,6 +41,8 @@
     padding: 15px;
     align-content: center;
     color: aliceblue;
+    justify-content: center;
+    display: flex;
 }
 .sex{
     display: flex;
@@ -65,4 +67,9 @@
 }
 .back-button{
     align-self: center;
+}
+.image-card{
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
 }
